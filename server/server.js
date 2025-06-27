@@ -8,11 +8,11 @@ app.use(express.json());
 
 // Replace with your actual Railway credentials
 const db = mysql.createConnection({
-  host: 'yamanote.proxy.rlwy.net',
-  user: 'root',
-  password: '${{MYSQL_ROOT_PASSWORD}}',
-  database: 'YOUR_${{MYSQL_DATABASE}}',
-  port: 3306
+  host: process.env.MYSQLHOST,
+  user: process.env.MYSQLUSER,
+  password: process.env.MYSQLPASSWORD,
+  database: process.env.MYSQLDATABASE,
+  port: process.env.MYSQLPORT
 });
 
 db.connect((err) => {
@@ -27,7 +27,7 @@ db.connect((err) => {
 app.get('/api/servers', (req, res) => {
   db.query('SELECT * FROM servers', (err, results) => {
     if (err) {
-      return res.status(500).json({ error: 'Query failed' });
+      return res.status(500).json({ error: 'Query failed' , details: err.message });
     }
     res.json(results);
   });
