@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Discord Server Tags Directory</title>
+  <link rel="stylesheet" href="tag.css" />
+</head>
+<body>
+  <!-- Top Bar -->
+  <header class="top-bar">
+    <img src="logo.png" alt="Logo" class="logo" />
+    <input type="text" id="searchInput" placeholder="Search servers..." />
+    <button id="submitServerBtn">Submit Your Server</button>
+  </header>
+
+  <!-- Table Section -->
+  <main>
+    <table id="serverTable">
+      <thead>
+        <tr>
+          <th>Server Tag</th>
+          <th>Member Count</th>
+          <th>Name</th>
+          <th>Invite</th>
+          <th>Server ID</th>
+        </tr>
+      </thead>
+      <tbody id="serverList">
+        <!-- Filled dynamically -->
+      </tbody>
+    </table>
+  </main>
+
+  <!-- Request Removal -->
+  <footer class="footer">
+    <div id="removalLink">Don’t want your server listed? Request removal</div>
+    <div class="popup" id="removalPopup">
+      <div class="popup-content">
+        <h3>Request Server Removal</h3>
+        <p>If you’d like your server removed:</p>
+        <ul>
+          <li>1. Revoke the invite listed here and disable the server widget.</li>
+          <li>2. This page auto-removes invalid invites after a few hours.</li>
+          <li>3. Or email us your server ID. We’ll verify and blacklist it.</li>
+        </ul>
+        <button id="closePopup">Close</button>
+      </div>
+    </div>
+
+    <div class="bottom-links">
+      <p>Created by Vedant</p>
+      <div class="socials">
+        <a href="https://github.com/Vedant-OGC" target="_blank">GitHub</a>
+        <a href="YOUR_X_LINK" target="_blank">X</a>
+        <a href="YOUR_DISCORD_SUPPORT" target="_blank">Discord</a>
+      </div>
+      <div class="legal">
+        <a href="/privacy">Privacy</a> • <a href="/terms">Terms</a>
+      </div>
+      <p>Contact us: <a href="mailto:YOUR_EMAIL">YOUR_EMAIL</a></p>
+      <p>Not affiliated with Discord Inc. “Discord” is a registered trademark of Discord Inc.</p>
+    </div>
+  </footer>
+
+  <script src="tag.js"></script>
+</body>
+</html>
