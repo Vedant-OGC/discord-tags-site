@@ -48,3 +48,5 @@ document.getElementById('submitServerBtn').addEventListener('click', () => {
 
 // Load data when ready
 window.onload = loadServers;
+
+# Note: 2026-01-05 - maintenance update
